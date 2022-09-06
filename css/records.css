@@ -1,0 +1,75 @@
+.records {
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    table-layout: fixed;
+
+}
+
+.records caption {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.records tr {
+    border-bottom: 1px solid #d1d1d161;
+    padding: 0.35rem;
+}
+
+.records th,
+.records td {
+    padding: 0.625rem;
+    text-align: left;
+}
+
+.records td {
+    font-size: 18px;
+}
+
+.records th {
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid #8f8f8f6e;
+}
+
+@media screen and (max-width: 800px) {
+    .records {
+        border: 0;
+    }
+    .records caption {
+        font-size: 1.3rem;
+    }
+    .records thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .records tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+    .records td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 1rem;
+        text-align: right;
+    }
+    .records td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+    .records td:last-child {
+        border-bottom: 0;
+    }
+}
